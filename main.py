@@ -25,7 +25,7 @@ def get_schedule(id, command='') -> str:
     if command == '/tomorrow':
         curr_day += 1
     schedule_for_day = [v for k, v in schedule_for_week.items()][(curr_day - 1) * 12: (curr_day) * 12]
-    final_schedule = f'{WEEK_RUS[curr_day]}   Неделя - {curr_week}\nРасписание на сегодня:\n'
+    final_schedule = f'{WEEK_RUS[curr_day-1]}   Неделя - {curr_week}\nРасписание на сегодня:\n'
     even_or_not = 0
     if not (curr_week % 2):
         even_or_not += 1
